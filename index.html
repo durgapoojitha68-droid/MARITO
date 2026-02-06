@@ -1,77 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>MAHI ❤️</title>
+  <meta charset="UTF-8">
+  <title>MAHI 💖</title>
   <style>
-    body{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      background:linear-gradient(135deg,#ffdde1,#ee9ca7);
-      font-family:Arial;
+    body {
+      background: #ffe6f2;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 40px;
     }
-    .box{
-      background:white;
-      padding:25px;
-      border-radius:18px;
-      text-align:center;
-      box-shadow:0 15px 30px rgba(0,0,0,0.25);
-      width:320px;
+    .teddy {
+      font-size: 120px;
+      animation: bounce 1.5s infinite;
     }
-    button{
-      margin-top:15px;
-      padding:10px 22px;
-      border:none;
-      border-radius:25px;
-      background:#ff4d6d;
-      color:white;
-      cursor:pointer;
-      font-size:15px;
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
     }
-    .final{
-      font-size:20px;
-      color:#ff4d6d;
-      font-weight:bold;
+    .box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 20px pink;
+    }
+    button {
+      background: hotpink;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      color: white;
+      border-radius: 15px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-<div class="box">
-  <h2>Hey MAHI 😏❤️</h2>
-  <p id="msg">Long distance sucks 😤</p>
-  <button id="btn" onclick="next()">Tap me 👀</button>
-</div>
+  <div class="teddy">🧸💖</div>
 
-<script>
-  const msgs = [
-    "But missing you is my full-time job 🥲",
-    "Also… why are you so cute? Illegal 🚨😌",
-    "Miles apart, still obsessed 😎❤️",
-    "I miss you more than Wi-Fi misses signal 😭",
-    "One day… no screen. Just you & me 🥰",
-    "Okay listen MAHI 😤👇"
-  ];
+  <div class="box">
+    <h1>Hey MAHI 😌</h1>
+    <p>
+      Long distance made you far…  
+      but also made you miss THIS cuteness 😂  
+    </p>
+    <p>
+      You’re annoying 🤏  
+      You’re funny 🤡  
+      You’re cute 🥹  
+      And somehow… still MINE 😏
+    </p>
 
-  let i = 0;
+    <button onclick="reveal()">Click once if you’re brave 👀💍</button>
 
-  function next(){
-    if(i < msgs.length){
-      document.getElementById("msg").innerText = msgs[i];
-      i++;
-    } else {
-      document.getElementById("msg").innerHTML =
-        "<span class='final'>I LOVE YOU MAHI ❤️<br><br>Will you be mine forever? 💍🥺</span>";
-      document.getElementById("btn").innerText = "YES 😳❤️";
-      document.getElementById("btn").onclick = () => {
-        document.getElementById("msg").innerHTML =
-          "<span class='final'>YAYYY 😭💖<br>Distance = temporary.<br>US = permanent 😌❤️</span>";
-        document.getElementById("btn").style.display = "none";
-      };
+    <h2 id="msg" style="display:none; margin-top:20px;">
+      I LOVE YOU MAHI 💖💖💖
+    </h2>
+  </div>
+
+  <script>
+    function reveal() {
+      document.getElementById("msg").style.display = "block";
     }
-  }
-</script>
+  </script>
 
 </body>
 </html>
